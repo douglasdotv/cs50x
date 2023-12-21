@@ -1,0 +1,11 @@
+1 - If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+Answer:
+We could take a look at the average energy, valence, and danceability values and come up with some kind of index for the user.
+
+2 - Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+Answer:
+Taking a look at the top 100 songs essentially ignores how musical tastes can change over the year and some genres that are not overplayed.
+We would need to look at more than just what was played the most. We should consider how tastes change over time and in different situations.
+Maybe we could also factor in other stuff like user playlists, skipped songs etc. to generate a more accurate aura.
