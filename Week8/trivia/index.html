@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section" id="multiple-choice">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the capital of Brazil?</h3>
+                <div class="answer-status"></div>
+                <div>
+                    <button type="button" value="São Paulo">São Paulo</button>
+                </div>
+                <div>
+                    <button type="button" value="Rio de Janeiro">Rio de Janeiro</button>
+                </div>
+                <div>
+                    <button type="button" value="Brasília">Brasília</button>
+                </div>
+                <div>
+                    <button type="button" value="Salvador">Salvador</button>
+                </div>
+            </div>
+            <div class="section" id="free-response">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What do IP, TCP and HTTP stand for?</h3>
+                <div class="answer-status"></div>
+                <textarea id="free-response-answer" rows="4" cols="40" placeholder="Enter your answer here"></textarea>
+                <div>
+                    <button type="button">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
