@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <title>Douglas' Webpage</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="index.html">Home</a>
+                        <a class="nav-item nav-link active" href="music.html">Music<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="aci.html">ACI</a>
+                        <a class="nav-item nav-link" href="sr.html">SR</a>
+                        <a class="nav-item nav-link" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container-fluid my-4">
+            <h1 class="text-center my-4">Music</h1>
+            <section id="vaporwave">
+                <h2 class="my-4">Nostalgia</h2>
+                <p>I'm deeply fascinated by the world of vaporwave, a genre that evokes nostalgia and a surreal reinterpretation of the past. Albums like 'News at 11' by Cat System Corp. captivate me with their unique blend of smooth jazz and ambient sounds, creating a parallel universe where time stands still. Artists like Ginger Root, Lush and Himiko Kikuchi transport me to a time that feels both familiar and unexplored. Their music, sometimes a dreamy rendition of the 80s and sometimes a serene dive into jazz, represents a journey through sound that resonates with my soul. I'm always feeling like taking a walk while listening to this kind of music.</p>
+            </section>
+            <section id="album-covers">
+                <h2 class="my-4">Covers</h2>
+                <div id="album-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100 carousel-image" src="https://ia902305.us.archive.org/2/items/news-at-11-wmy7d8/cover_itemimage.png?cnt=0" alt="News at 11">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 carousel-image" src="https://f4.bcbits.com/img/a0419423184_16.jpg" alt="w w w . d e e p d i v e . c o m">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100 carousel-image" src="https://f4.bcbits.com/img/a3122062570_16.jpg" alt="One Hundred Mornings">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#album-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#album-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+            <section id="music-player">
+                <h2 class="my-4">Listen to some music</h2>
+                <audio id="audio-player" controls>
+                    <source id="audio-source" src="https://ia902305.us.archive.org/2/items/news-at-11-wmy7d8/%E7%8C%AB%20%E3%82%B7%20Corp.%20-%20NEWS%20AT%2011%20-%2020%20THE%20WEATHER%20CHANNEL%2011.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button id="play-button" class="btn btn-outline-dark">Play</button>
+            </section>
+        </main>
+
+        <footer class="text-center my-4">
+            Copyright © 2023. All rights reserved.
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
