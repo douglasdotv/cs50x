@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="section">
+        <h2>Update Birthday</h2>
+        <form action="/update/{{ birthday.id }}" method="post">
+            <input type="hidden" name="id" value="{{ birthday.id }}">
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" value="{{ birthday.name }}" required>
+            </div>
+            <div>
+                <label for="month">Month:</label>
+                <select id="month" name="month" required>
+                    <option value="" disabled>Month</option>
+                    {% for month in months %}
+                        <option value="{{ loop.index }}" {% if loop.index == birthday.month %} selected {% endif %}>{{ month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="day">Day:</label>
+                <input id="day" name="day" type="number" value="{{ birthday.day }}" min="1" max="31" required>
+            </div>
+            <div>
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

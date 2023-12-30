@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="section">
+        <h2>Add a Birthday</h2>
+        <form action="/" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" placeholder="Name" autocomplete="off" required>
+            </div>
+            <div>
+                <label for="month">Month:</label>
+                <select id="month" name="month" required>
+                    <option value="" disabled selected>Month</option>
+                    {% for month in months %}
+                        <option value="{{ loop.index }}">{{ month }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="day">Day:</label>
+                <input id="day" name="day" type="number" min="1" max="31" placeholder="Day" autocomplete="off" required>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>All Birthdays</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for birthday in birthdays %}
+                    <tr>
+                        <td>{{ birthday.name }}</td>
+                        <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                        <td>
+                            <form action="/delete" method="post">
+                                <input type="hidden" name="id" value="{{ birthday.id }}">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                        <td><a href="/update/{{ birthday.id }}"><button type="button">Edit</button></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
