@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p class="custom-title mb-3">Result</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if stockdata %}
+                <tr>
+                    <td>{{ stockdata.name }}</td>
+                    <td>{{ stockdata.price | usd }}</td>
+                    <td>{{ stockdata.symbol }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="3">No data available</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+{% endblock %}

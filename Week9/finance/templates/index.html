@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <p class="custom-title mb-3">Owned Stocks</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Total Shares</th>
+                <th>Price per Share</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for holding in stockholdings %}
+                <tr>
+                    <td>{{ holding.symbol }}</td>
+                    <td>{{ holding.total_shares }}</td>
+                    <td>{{ holding.current_price | usd }}</td>
+                    <td>{{ holding.total_value | usd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-start bg-dark text-white p-3 mb-3 rounded">
+        <p class="mb-0">Cash: {{ usercash | usd }}</p>
+    </div>
+{% endblock %}
