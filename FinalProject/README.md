@@ -1,4 +1,7 @@
 # CS50 Final Project
 
-For the final project, please visit the following GitHub repository:  
-[Final Project Repository](https://github.com/douglasdotv/acmap)
+The final project can be found in the following repositories:
+
+[Backend](https://github.com/douglasdotv/acmap-backend)
+
+[Frontend](https://github.com/douglasdotv/acmap-frontend)
